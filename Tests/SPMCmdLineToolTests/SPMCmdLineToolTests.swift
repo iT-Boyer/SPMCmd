@@ -11,15 +11,16 @@ final class SPMCmdLineToolTests: XCTestCase {
         guard #available(macOS 10.13, *) else {
             return
         }
-
+        // 运行可执行文件
         let fooBinary = productsDirectory.appendingPathComponent("SPMCmdLineTool")
 
         let process = Process()
+        // 指定可执行文件
         process.executableURL = fooBinary
 
         let pipe = Pipe()
         process.standardOutput = pipe
-
+        //开始运行
         try process.run()
         process.waitUntilExit()
 
@@ -33,6 +34,7 @@ final class SPMCmdLineToolTests: XCTestCase {
     var productsDirectory: URL {
       #if os(macOS)
         for bundle in Bundle.allBundles where bundle.bundlePath.hasSuffix(".xctest") {
+            print("路径:\(bundle.bundleURL)")
             return bundle.bundleURL.deletingLastPathComponent()
         }
         fatalError("couldn't find the products directory")

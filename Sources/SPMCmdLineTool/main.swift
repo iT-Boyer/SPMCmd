@@ -8,4 +8,6 @@ import FilesProvider
 //    panagram.staticMode()
 //}
 
-LocalFile(path: "/")
+//LocalFile(path: "/")
+
+print("Hello, world!")
