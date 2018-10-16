@@ -9,8 +9,9 @@
 import Foundation
 import FilesProvider
 func LocalFile(path:String) {
+    print("打印的路径:\(path)")
     let documentsProvider = LocalFileProvider()
-    documentsProvider.contentsOfDirectory(path: "/", completionHandler: { contents, error in
+    documentsProvider.contentsOfDirectory(path: path, completionHandler: { contents, error in
         for file in contents {
             print("Name: \(file.name)")
             print("Size: \(file.size)")
