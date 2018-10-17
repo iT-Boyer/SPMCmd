@@ -52,18 +52,6 @@ class TestFilesProvider: XCTestCase {
         }
         waitForExpectations(timeout: 40, handler: nil)
     }
-    func testdelFile() {
-        let filePath = "admin/hsg/testPng/123.png"
-        print(documentsProvider.baseURL?.absoluteString)
-        documentsProvider.removeItem(path: filePath) { (error) in
-            //重命名压缩过的tmp文件
-            print("ddddddderr:\(error?.localizedDescription)")
-//            print("file路径：11111\(filePath)\ntmp文件路径：1111\(tmpFilePath)")
-//            self.documentsProvider.moveItem(path: tmpFilePath, to: filePath, overwrite: true,  completionHandler: { (error) in
-//                self.pngexpectation.fulfill()
-//            })
-        }
-    }
     //可用
     func testProcessRunShellScript(filePath:String) {
         let sub = "_temp.png"

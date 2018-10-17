@@ -9,6 +9,15 @@
           "revision": "e72d7ff088b76204f150d1dce7fa5a83c4ae67ec",
           "version": "0.25.1"
         }
+      },
+      {
+        "package": "PerfectPython",
+        "repositoryURL": "https://github.com/PerfectlySoft/Perfect-Python.git",
+        "state": {
+          "branch": null,
+          "revision": "764a85d6fee5c42701d9b2fca6e30fa921361ae4",
+          "version": "3.2.0"
+        }
       }
     ]
   },
