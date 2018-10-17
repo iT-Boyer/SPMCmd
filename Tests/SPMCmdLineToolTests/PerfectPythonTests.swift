@@ -24,15 +24,22 @@ class PerfectPythonTests: XCTestCase {
         //导入Python函数库模块/compresspng.py
         let path = "/Users/admin/hsg/hexo/GitSubmodules/hsgTool/pngquant"
         let pymod = try! PyObj(path: path, import: "compresspng")
-        //pymod.load()加载变量
+        //获取变量值
         if let str = pymod.load("stringVar")?.value as? String {
             print("加载变量:\(str)")
         }
-        //保存当前变量为一个新的值
+        //更新变量值
         try! pymod.save("stringVar", newValue: "Hola, 🇨🇳🇨🇦！")
         if let str = pymod.load("stringVar")?.value as? String {
             print("保存当前变量:\(str)")
         }
+        //执行Python函数
+        if let res = try! pymod.call("mymul", args: [2,3])?.value as? Int
+        {
+                print(res)
+            // 结果为 6
+        }
+        
     }
 
     func testPerformanceExample() {
