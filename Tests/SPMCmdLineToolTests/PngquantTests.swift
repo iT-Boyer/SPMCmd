@@ -10,14 +10,14 @@ import FilesProvider
 //@testable import SPMCmdLineTool
 //@import SPMCmdLineTool
 
-class TestFilesProvider: XCTestCase {
+class PngquantTests: XCTestCase {
 
     var documentsProvider:LocalFileProvider!
     var pngexpectation: XCTestExpectation! = nil
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         documentsProvider = LocalFileProvider(for: .userDirectory, in: .allDomainsMask)
-        pngexpectation = self.expectation(description: "BLDownloadImageNotification")
+        pngexpectation = self.expectation(description: "PngquantTests")
     }
 
     override func tearDown() {
