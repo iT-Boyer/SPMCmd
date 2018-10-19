@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+/// 猜字游戏的终端工具
 class Panagram {
     //
     let consoleIO = ConsoleIO()

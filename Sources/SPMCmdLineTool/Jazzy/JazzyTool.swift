@@ -8,9 +8,11 @@
 
 import Foundation
 
-/*:
- 功能描述: 通过命令输入，来引导用户生成自己的文档，
- 需求：仿照jazzy-create.sh shell工具完成功能
+/**:
+ 功能描述:
+    通过命令输入，来引导用户生成自己的文档，
+ 需求：
+    仿照jazzy-create.sh shell工具完成功能
  
  - 主要接口:
      ```

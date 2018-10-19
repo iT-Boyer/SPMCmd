@@ -37,11 +37,11 @@ enum OptionType:String {
     }
 }
 
-//控制台输出类
+///控制台输出类
 class ConsoleIO{
-        //在控制台打印说明文档信息
+        ///在控制台打印说明文档信息
     class func printUsage(){
-        //Process是一个围绕argc和argv参数的小包装，您可能从类似c的语言中知道这些参数
+        ///Process是一个围绕argc和argv参数的小包装，您可能从类似c的语言中知道这些参数
         let executableName = (CommandLine.arguments[0] as NSString).lastPathComponent
         print("usage:")
         print("\(executableName) -a string1 string2")

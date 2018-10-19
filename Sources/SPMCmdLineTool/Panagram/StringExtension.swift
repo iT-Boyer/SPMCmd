@@ -7,7 +7,8 @@
 //
 
 import Foundation
-
+/// String扩展
+/// - 字符串比较
 extension String{
     
     /// 字符串比较
@@ -15,11 +16,11 @@ extension String{
     /// - Parameter s: 比较的字符串
     /// - Returns: 字符串是否一样
     func isAnagramOfString(s:String) -> Bool {
-        //1. 忽略两个字符串之间的大写和空格
+        /// 1. 忽略两个字符串之间的大写和空格
         let lowerSelf = self.lowercased().replacingOccurrences(of: " ", with: "")
         let lowerOther = s.lowercased().replacingOccurrences(of:" ", with: "")
         
-        //2. 检查两个字符串是否包含相同的字符，以及所有字符出现的次数是否相同
+        /// 2. 检查两个字符串是否包含相同的字符，以及所有字符出现的次数是否相同
         return lowerSelf.sorted() == lowerOther.sorted()
     }
     

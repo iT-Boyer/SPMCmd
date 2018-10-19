@@ -8,7 +8,7 @@
 
 import Foundation
 
-/*:
+/**:
  功能描述: 控制台输出类
  
  - 主要接口:
@@ -26,13 +26,6 @@ import Foundation
      ```
  - 模块
  */
-
-/// 生成的命令参数：暂时用不到，只需要回车，通过提示，输入参数值就行
-//enum GenerParam:String {
-//    typealias RawValue = <#type#>
-//    
-//    
-//}
 class JazzyConsoleIO:ConsoleIO{
     
     //MARK:- override
