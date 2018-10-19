@@ -25,11 +25,11 @@ class FilesProviderTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let data = "What's up Newyork!".data(encoding: .utf8)
+//        let data = "What's up Newyork!".data(encoding: .utf8)
 //        documentsProvider.writeContents(path: "old.txt", content: data, atomically: true, completionHandler: nil)
-        documentsProvider.writeContents(path: <#T##String#>, contents: <#T##Data?#>, overwrite: <#T##Bool#>, completionHandler: <#T##SimpleCompletionHandler##SimpleCompletionHandler##(Error?) -> Void#>)
-        documentsProvider.writeContents(path: <#T##String#>, contents: <#T##Data?#>, atomically: <#T##Bool#>, completionHandler: <#T##SimpleCompletionHandler##SimpleCompletionHandler##(Error?) -> Void#>)
-        documentsProvider.
+//        documentsProvider.writeContents(path: <#T##String#>, contents: <#T##Data?#>, overwrite: <#T##Bool#>, completionHandler: <#T##SimpleCompletionHandler##SimpleCompletionHandler##(Error?) -> Void#>)
+//        documentsProvider.writeContents(path: <#T##String#>, contents: <#T##Data?#>, atomically: <#T##Bool#>, completionHandler: <#T##SimpleCompletionHandler##SimpleCompletionHandler##(Error?) -> Void#>)
+//        documentsProvider.
     }
 
     func testPerformanceExample() {

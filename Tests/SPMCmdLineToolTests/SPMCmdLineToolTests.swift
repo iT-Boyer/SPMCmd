@@ -2,6 +2,29 @@ import XCTest
 import class Foundation.Bundle
 
 final class SPMCmdLineToolTests: XCTestCase {
+    var process:Process!
+    override func setUp() {
+        guard #available(macOS 10.13, *) else {
+            return
+        }
+        // 运行可执行文件
+        let fooBinary = productsDirectory.appendingPathComponent("SPMCmdLineTool")
+        process = Process()
+        // 指定可执行文件
+        process.executableURL = fooBinary
+    }
+    func testJazzyTool() {
+        guard #available(macOS 10.13, *) else {
+            return
+        }
+        let pipe = Pipe()
+        process.standardOutput = pipe
+        process.arguments = ["33"]
+        //开始运行
+        try! process.run()
+        process.waitUntilExit()
+    }
+    
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
@@ -11,13 +34,6 @@ final class SPMCmdLineToolTests: XCTestCase {
         guard #available(macOS 10.13, *) else {
             return
         }
-        // 运行可执行文件
-        let fooBinary = productsDirectory.appendingPathComponent("SPMCmdLineTool")
-
-        let process = Process()
-        // 指定可执行文件
-        process.executableURL = fooBinary
-
         let pipe = Pipe()
         process.standardOutput = pipe
         //开始运行

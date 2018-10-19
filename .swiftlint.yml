@@ -1,0 +1,6 @@
+excluded:
+    - Pods
+    - .build
+opt_in_rules: # 一些规则仅仅是可选的
+    - empty_count
+    - missing_docs
