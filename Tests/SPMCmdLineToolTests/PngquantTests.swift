@@ -23,7 +23,23 @@ class PngquantTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
+    func testRenames() {
+        documentsProvider.contentsOfDirectory(path: "admin/Downloads/门店详情") { (contents, error) in
+            var i = 0
+            for file in contents{
+                let path = file.path.replacingOccurrences(of: " ", with: "")
+                ///重命名
+                self.documentsProvider.moveItem(path: file.path, to: path, overwrite: true,  completionHandler: { (error) in
+                    if i == contents.count
+                    {
+                        self.pngexpectation.fulfill()
+                    }
+                })
+                i = i + 1
+            }
+        }
+        waitForExpectations(timeout: 60, handler: nil)
+    }
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
