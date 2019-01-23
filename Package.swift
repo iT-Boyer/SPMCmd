@@ -24,8 +24,13 @@ let package = Package(
         .target(name: "iSPMCmd",
         dependencies: ["FilesProvider", "PerfectPython"],
                 path: "Sources/Panagram"),
-        .testTarget(
-            name: "SPMCmdLineToolTests",
+        .testTarget(name: "SPMCmdLineToolTests",
             dependencies: ["iSPMCmd"]),
+        .target(name: "DesignPatterns",
+                dependencies: [],
+                path: "DesignPatterns/hsg.util.firstPattern"),
+        .testTarget(name: "DesignPatternsTest",
+                dependencies: ["DesignPatterns"],
+                path:"DesignPatterns/hsg.util.firstPatternTests"),
         ]
 )
