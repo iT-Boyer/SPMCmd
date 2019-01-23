@@ -1,0 +1,3 @@
+[submodule "DesignPatterns"]
+	path = DesignPatterns
+	url = https://github.com/huos3203/DesignPatterns.git
