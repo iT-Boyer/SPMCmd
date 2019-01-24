@@ -22,15 +22,22 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(name: "iSPMCmd",
-        dependencies: ["FilesProvider", "PerfectPython"],
-                path: "Sources/Panagram"),
+                dependencies: ["FilesProvider", "PerfectPython"],
+                path:"Sources/iSPMCmd"),
+        
         .testTarget(name: "SPMCmdLineToolTests",
-            dependencies: ["iSPMCmd"]),
-        .target(name: "DesignPatterns",
+                    dependencies: ["iSPMCmd"],
+                    path:"Tests/SPMCmdLineToolTests"),
+        
+        .target(name: "Panagram",
+                path: "Sources/Panagram"),
+        
+        .target(name: "hsg.util.firstPattern",
                 dependencies: [],
                 path: "DesignPatterns/hsg.util.firstPattern"),
+        
         .testTarget(name: "DesignPatternsTest",
-                dependencies: ["DesignPatterns"],
+                dependencies: ["hsg.util.firstPattern"],
                 path:"DesignPatterns/hsg.util.firstPatternTests"),
         ]
 )
