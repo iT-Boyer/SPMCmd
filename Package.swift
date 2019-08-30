@@ -29,8 +29,10 @@ let package = Package(
                     dependencies: ["iSPMCmd"],
                     path:"Tests/SPMCmdLineToolTests"),
         
-        .target(name: "Panagram",
-                path: "Sources/Panagram"),
+        .target(name: "Panagrams",
+                path: "Sources/Panagrams"
+                exclude:["docs"],
+                sources:["Sources"]),
         
         .target(name: "hsg.util.firstPattern",
                 dependencies: [],
