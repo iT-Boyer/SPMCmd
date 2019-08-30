@@ -30,7 +30,7 @@ let package = Package(
                     path:"Tests/SPMCmdLineToolTests"),
         
         .target(name: "Panagrams",
-                path: "Sources/Panagrams"
+                path: "Sources/Panagrams",
                 exclude:["docs"],
                 sources:["Sources"]),
         
