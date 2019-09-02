@@ -1,0 +1,11 @@
+author: 猜字游戏
+author_url: http://huos3203.github.io
+github_url: https://github.com/huos3203/Panagrams
+root_url: https://github.com/huos3203/Panagrams
+module: Panagrams
+output: docs/iOS
+theme: fullwidth
+min_acl: internal
+sdk: iphone
+module_version: 1.0.0
+xcodebuild_arguments: [-scheme, 'Panagrams']
