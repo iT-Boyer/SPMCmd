@@ -34,12 +34,10 @@ let package = Package(
                 exclude:["docs"],
                 sources:["Sources"]),
         
-        .target(name: "hsg.util.firstPattern",
+        .target(name: "DesignPatterns",
                 dependencies: [],
-                path: "DesignPatterns/hsg.util.firstPattern"),
-        
-        .testTarget(name: "DesignPatternsTest",
-                dependencies: ["hsg.util.firstPattern"],
-                path:"DesignPatterns/hsg.util.firstPatternTests"),
+                        path: "Sources/DesignPatterns",
+                     exclude: ["docs","other"],
+                     sources: ["Sources"])
         ]
 )

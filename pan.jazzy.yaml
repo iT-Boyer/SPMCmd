@@ -3,9 +3,9 @@ author_url: http://huos3203.github.io
 github_url: https://github.com/huos3203/Panagrams
 root_url: https://github.com/huos3203/Panagrams
 module: Panagrams
-output: docs/iOS
+clean: true
+output: Sources/Panagrams/docs
 theme: fullwidth
 min_acl: internal
-sdk: iphone
 module_version: 1.0.0
-xcodebuild_arguments: [-scheme, 'Panagrams']
+xcodebuild_arguments: [-scheme, 'Panagrams',USE_SWIFT_RESPONSE_FILE=NO]

@@ -1,6 +1,6 @@
-[submodule "DesignPatterns"]
-	path = DesignPatterns
-	url = https://github.com/huos3203/DesignPatterns.git
 [submodule "Sources/Panagrams"]
 	path = Sources/Panagrams
 	url = https://github.com/huos3203/Panagrams.git
+[submodule "Sources/DesignPatterns"]
+	path = Sources/DesignPatterns
+	url = https://github.com/huos3203/DesignPatterns.git
