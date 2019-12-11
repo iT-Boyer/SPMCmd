@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "CRuntime",
+        "repositoryURL": "https://github.com/wickwirew/CRuntime.git",
+        "state": {
+          "branch": null,
+          "revision": "95f911318d8c885f6fc05e971471f94adfd39405",
+          "version": "2.1.2"
+        }
+      },
+      {
         "package": "FilesProvider",
         "repositoryURL": "https://github.com/amosavian/FileProvider.git",
         "state": {
@@ -17,6 +26,42 @@
           "branch": null,
           "revision": "764a85d6fee5c42701d9b2fca6e30fa921361ae4",
           "version": "3.2.0"
+        }
+      },
+      {
+        "package": "Runtime",
+        "repositoryURL": "https://github.com/wickwirew/Runtime.git",
+        "state": {
+          "branch": null,
+          "revision": "61c9776f47d2951bdc562486ad348e5e1ca2e180",
+          "version": "2.1.1"
+        }
+      },
+      {
+        "package": "SemanticUI",
+        "repositoryURL": "https://github.com/SwiftWebResources/SemanticUI-Swift.git",
+        "state": {
+          "branch": null,
+          "revision": "eaa40d8f7c01e1aad896fb8747edd3a1b71dc41a",
+          "version": "2.3.4"
+        }
+      },
+      {
+        "package": "swift-nio",
+        "repositoryURL": "https://github.com/apple/swift-nio.git",
+        "state": {
+          "branch": null,
+          "revision": "e208ab9555ffb5fefb58cb5cb17df0f9fe9ee47e",
+          "version": "2.11.0"
+        }
+      },
+      {
+        "package": "SwiftWebUI",
+        "repositoryURL": "https://github.com/SwiftWebUI/SwiftWebUI",
+        "state": {
+          "branch": null,
+          "revision": "e3332cf39d3a81817f6862896ae3fe4dd8d94ced",
+          "version": "0.2.1"
         }
       }
     ]
