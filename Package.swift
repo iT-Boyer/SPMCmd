@@ -15,11 +15,13 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
-        .package(name:"FilesProvider", url: "https://github.com/amosavian/FileProvider.git",from:"0.25.1"),
+        .package(name:"FilesProvider", url: "https://github.com/amosavian/FileProvider.git",from:"0.26.0"),
         .package(name:"PerfectPython", url: "https://github.com/PerfectlySoft/Perfect-Python.git", from: "3.2.0"),
         //https://github.com/SwiftWebUI/SwiftWebUI
         .package(name:"SwiftWebUI", url: "https://github.com/SwiftWebUI/SwiftWebUI", from: "0.1.7"),
+        // CLI快速创建和管理命令工具
         .package(name:"Guaka", url: "https://github.com/oarrabi/Guaka.git", from: "0.0.0"),
+        // XML/HTML 解析工具
         .package(name:"Kanna", url: "https://github.com/tid-kijyun/Kanna.git", from: "5.2.2"),
     ],
     targets: [
