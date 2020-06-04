@@ -1,9 +1,6 @@
-[submodule "Sources/Panagrams"]
-	path = Others/Panagrams
-	url = https://github.com/it-boyer/Panagrams.git
-[submodule "Sources/DesignPatterns"]
-	path = Others/DesignPatterns
-	url = https://github.com/it-boyer/DesignPatterns.git
 [submodule "Others/Design"]
 	path = Others/Design
 	url = https://github.com/it-boyer/DesignPatterns.git
+[submodule "Others/Panagrams"]
+	path = Others/Panagrams
+	url = https://github.com/it-boyer/Panagrams.git

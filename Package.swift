@@ -44,9 +44,9 @@ let package = Package(
                 sources:["Sources"]
         ),
         
-        .target(name: "DesignPatterns",
+        .target(name: "Designer",
                 dependencies: [],
-                        path: "Others/DesignPatterns",
+                        path: "Others/Design",
                      exclude: ["docs","other"],
                      sources: ["Sources"]
         ),
