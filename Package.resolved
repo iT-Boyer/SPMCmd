@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "FileUtils",
+        "repositoryURL": "https://github.com/nsomar/FileUtils",
+        "state": {
+          "branch": null,
+          "revision": "fca327ea913f3d985954d23c9bd383ccf418b588",
+          "version": "0.2.0"
+        }
+      },
+      {
         "package": "Guaka",
         "repositoryURL": "https://github.com/oarrabi/Guaka.git",
         "state": {
@@ -44,6 +53,15 @@
           "branch": null,
           "revision": "764a85d6fee5c42701d9b2fca6e30fa921361ae4",
           "version": "3.2.0"
+        }
+      },
+      {
+        "package": "Regex",
+        "repositoryURL": "https://github.com/sharplet/Regex.git",
+        "state": {
+          "branch": null,
+          "revision": "76c2b73d4281d77fc3118391877efd1bf972f515",
+          "version": "2.1.1"
         }
       },
       {
@@ -83,6 +101,15 @@
         }
       },
       {
+        "package": "HTMLEntities",
+        "repositoryURL": "https://github.com/IBM-Swift/swift-html-entities.git",
+        "state": {
+          "branch": null,
+          "revision": "744c094976355aa96ca61b9b60ef0a38e979feb7",
+          "version": "3.0.14"
+        }
+      },
+      {
         "package": "swift-nio",
         "repositoryURL": "https://github.com/apple/swift-nio.git",
         "state": {
@@ -98,6 +125,15 @@
           "branch": null,
           "revision": "e3332cf39d3a81817f6862896ae3fe4dd8d94ced",
           "version": "0.2.1"
+        }
+      },
+      {
+        "package": "Yams",
+        "repositoryURL": "https://github.com/jpsim/Yams.git",
+        "state": {
+          "branch": null,
+          "revision": "81a65c4069c28011ee432f2858ba0de49b086677",
+          "version": "3.0.1"
         }
       }
     ]
