@@ -4,3 +4,6 @@
 [submodule "Sources/DesignPatterns"]
 	path = Others/DesignPatterns
 	url = https://github.com/it-boyer/DesignPatterns.git
+[submodule "Others/Design"]
+	path = Others/Design
+	url = https://github.com/it-boyer/DesignPatterns.git
