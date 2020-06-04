@@ -61,7 +61,7 @@ let package = Package(
                 ],
                 path: "Others/math"
         ),
-        .target(name: "jonyfive",
+        .target(name: "Jonyfive",
                 dependencies: [
                     "HTMLEntities",
                     "Yams",
