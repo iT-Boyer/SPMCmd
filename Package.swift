@@ -30,28 +30,37 @@ let package = Package(
                 dependencies: ["FilesProvider", "PerfectPython","Guaka","Kanna",
                                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
                 ],
-                path:"Sources",
-                exclude:["DesignPatterns","Panagrams","SwiftWebUI"]
+                path:"Sources"
         ),
         
         .testTarget(name: "SPMCmdLineToolTests",
                     dependencies: ["iSPMCmd"],
-                    path:"Tests/SPMCmdLineToolTests"),
+                    path:"Tests/SPMCmdLineToolTests"
+        ),
         
         .target(name: "Panagrams",
-                path: "Sources/Panagrams",
+                path: "Others/Panagrams",
                 exclude:["docs"],
-                sources:["Sources"]),
+                sources:["Sources"]
+        ),
         
         .target(name: "DesignPatterns",
                 dependencies: [],
-                        path: "Sources/DesignPatterns",
+                        path: "Others/DesignPatterns",
                      exclude: ["docs","other"],
-                     sources: ["Sources"])
+                     sources: ["Sources"]
+        ),
+        
+        .target(name:"math",
+                dependencies:[
+                    .product(name: "ArgumentParser", package: "swift-argument-parser"),
+                ],
+                path: "Others/math"
+        )
         
 //        .target(name: "SwiftUIServer",
 //            dependencies: [],
-//                    path: "Sources/SwiftWebUI",
+//                    path: "Others/SwiftWebUI",
 //                 exclude: ["docs","other"],
 //                 sources: ["Sources"])
         ]
