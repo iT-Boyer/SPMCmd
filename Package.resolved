@@ -20,6 +20,24 @@
         }
       },
       {
+        "package": "Guaka",
+        "repositoryURL": "https://github.com/oarrabi/Guaka.git",
+        "state": {
+          "branch": null,
+          "revision": "6fb29b2378166a30d72120980e1c099c664598de",
+          "version": "0.4.1"
+        }
+      },
+      {
+        "package": "Kanna",
+        "repositoryURL": "https://github.com/tid-kijyun/Kanna.git",
+        "state": {
+          "branch": null,
+          "revision": "609367a2cd84827a33383cf7923cb4fe8f69ee0a",
+          "version": "5.2.2"
+        }
+      },
+      {
         "package": "PerfectPython",
         "repositoryURL": "https://github.com/PerfectlySoft/Perfect-Python.git",
         "state": {
@@ -44,6 +62,15 @@
           "branch": null,
           "revision": "eaa40d8f7c01e1aad896fb8747edd3a1b71dc41a",
           "version": "2.3.4"
+        }
+      },
+      {
+        "package": "StringScanner",
+        "repositoryURL": "https://github.com/getGuaka/StringScanner.git",
+        "state": {
+          "branch": null,
+          "revision": "de1685ad202cb586d626ed52d6de904dd34189f3",
+          "version": "0.4.1"
         }
       },
       {
