@@ -11,27 +11,36 @@
 
 import ArgumentParser
 
+/// 基础属性配置
 struct Math: ParsableCommand {
     // Customize your command's help and subcommands by implementing the
     // `configuration` property.
     static var configuration = CommandConfiguration(
         // Optional abstracts and discussions are used for help output.
-        abstract: "A utility for performing maths.",
+        abstract: "一个好用的终端计算器.",
 
         // Commands can define a version for automatic '--version' support.
         version: "1.0.0",
 
+        // 设置支持的子命令集合（加，乘，统计）
         // Pass an array to `subcommands` to set up a nested tree of subcommands.
         // With language support for type-level introspection, this could be
         // provided by automatically finding nested `ParsableCommand` types.
         subcommands: [Add.self, Multiply.self, Statistics.self],
         
+        // 设置默认命令
         // A default subcommand, when provided, is automatically selected if a
         // subcommand is not given on the command line.
         defaultSubcommand: Add.self)
 
 }
 
+/** **参数和flag声明**
+ 注解语法 @
+ 1. @Argument 表明该属性是作为命令行参数
+ 2. @flag     命令所接收的`-v/–v`
+ 3. @OptionGroup 包括flag、选项和参数
+ */
 struct Options: ParsableArguments {
     @Flag(name: [.customLong("hex-output"), .customShort("x")],
           help: "Use hexadecimal notation for the result.")
@@ -48,9 +57,10 @@ extension Math {
             : String(result)
     }
 
+    // 加法
     struct Add: ParsableCommand {
         static var configuration =
-            CommandConfiguration(abstract: "Print the sum of the values.")
+            CommandConfiguration(abstract: "打印参数（inter类型）之和.")
 
         // The `@OptionGroup` attribute includes the flags, options, and
         // arguments defined by another `ParsableArguments` type.
@@ -58,14 +68,16 @@ extension Math {
         var options: Options
         
         mutating func run() {
+            // 解析参数，并执行算法，计算出结果
             let result = options.values.reduce(0, +)
             print(format(result, usingHex: options.hexadecimalOutput))
         }
     }
 
+    // 乘法
     struct Multiply: ParsableCommand {
         static var configuration =
-            CommandConfiguration(abstract: "Print the product of the values.")
+            CommandConfiguration(abstract: "打印值的乘积.")
 
         @OptionGroup()
         var options: Options
@@ -76,20 +88,19 @@ extension Math {
         }
     }
 }
- 
-// In practice, these nested types could be broken out into different files.
+
+// 实际上，这些嵌套类型可以分解为不同的文件
 extension Math {
     struct Statistics: ParsableCommand {
         static var configuration = CommandConfiguration(
-            // Command names are automatically generated from the type name
-            // by default; you can specify an override here.
-            commandName: "stats",
-            abstract: "Calculate descriptive statistics.",
+            commandName: "stats", // 自定义命令名，默认是类型名
+            abstract: "Calculate descriptive statistics.", //简介说明
             subcommands: [Average.self, StandardDeviation.self, Quantiles.self])
     }
 }
 
 extension Math.Statistics {
+    // 求平均值
     struct Average: ParsableCommand {
         static var configuration = CommandConfiguration(
             abstract: "Print the average of the values.",
@@ -99,15 +110,16 @@ extension Math.Statistics {
             case mean, median, mode
         }
 
-        @Option(default: .mean, help: "The kind of average to provide.")
+        @Option(default: .mean, help: "求某一种类型的平均值.")
         var kind: Kind
         
         @Argument(help: "A group of floating-point values to operate on.")
         var values: [Double]
 
+        // 验证
         func validate() throws {
             if (kind == .median || kind == .mode) && values.isEmpty {
-                throw ValidationError("Please provide at least one value to calculate the \(kind).")
+                throw ValidationError("请先选一种平均值的类型 \(kind).")
             }
         }
 
@@ -163,7 +175,7 @@ extension Math.Statistics {
     struct StandardDeviation: ParsableCommand {
         static var configuration = CommandConfiguration(
             commandName: "stdev",
-            abstract: "Print the standard deviation of the values.")
+            abstract: "打印值的标准偏差。")
 
         @Argument(help: "A group of floating-point values to operate on.")
         var values: [Double]
@@ -186,7 +198,7 @@ extension Math.Statistics {
     
     struct Quantiles: ParsableCommand {
         static var configuration = CommandConfiguration(
-            abstract: "Print the quantiles of the values (TBD).")
+            abstract: "打印数值的分位数（待定）。")
 
         @Argument(help: "A group of floating-point values to operate on.")
         var values: [Double]
