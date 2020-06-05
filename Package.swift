@@ -61,6 +61,12 @@ let package = Package(
                 ],
                 path: "Others/math"
         ),
+        .target(name:"Random",
+                dependencies:[
+                    .product(name: "ArgumentParser", package: "swift-argument-parser"),
+                ],
+                path: "Others/Random"
+        ),
         .target(name: "Jonyfive",
                 dependencies: [
                     "HTMLEntities",
