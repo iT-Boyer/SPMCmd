@@ -29,6 +29,8 @@ let package = Package(
         //quick行为测试
         .package(url: "https://github.com/Quick/Quick.git", from: "2.2.0"),
         .package(url: "https://github.com/Quick/Nimble.git", from: "8.0.9"),
+        //xcodeproj
+        .package(name: "XcodeProj", url: "https://github.com/tuist/xcodeproj.git", .upToNextMajor(from: "7.11.1"))
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -40,7 +42,8 @@ let package = Package(
                                "Kanna",
 //                               "Quick",
 //                               "Nimble",
-                                .product(name: "ArgumentParser", package: "swift-argument-parser"),
+                               "XcodeProj",
+                               .product(name: "ArgumentParser", package: "swift-argument-parser"),
                 ],
                 path:"Sources"
         ),
