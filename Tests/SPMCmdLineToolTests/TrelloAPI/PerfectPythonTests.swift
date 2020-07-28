@@ -48,7 +48,8 @@ class PerfectPythonTests: XCTestCase {
 
   override func setUp() {
     Py_Initialize()
-    var program = """class Person:
+    var program = """
+class Person:
                     def __init__(self, name, age):
                         self.name = name
                         self.age = age
@@ -57,7 +58,8 @@ class PerfectPythonTests: XCTestCase {
                   """
     var path = "/tmp/clstest.py"
     writeScript(path: path, content: program)
-    program = """def mymul(num1, num2):
+    program = """
+    def mymul(num1, num2):
                     return num1 * num2;
                 def mydouble(num):
                     return num * 2;
