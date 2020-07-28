@@ -52,7 +52,7 @@ class FilesProviderTests: XCTestCase {
         print("Test fulfilled: \(desc).")
     }
     
-    func testRenames() {
+    func testPersonalNewPage() {
         let desc = "Copying file in \(provider.type)"
         print("Test started: \(desc).")
         let expectation = XCTestExpectation(description: desc)
