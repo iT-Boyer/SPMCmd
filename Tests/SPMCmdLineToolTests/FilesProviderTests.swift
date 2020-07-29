@@ -60,7 +60,7 @@ class FilesProviderTests: XCTestCase {
         //       let plistPath = testBundle.path(forResource: "personalNewPage", ofType: "plist")
         let plistPath = "/Users/jhmac/hsg/SupervisionSel/SupervisionSelTests/Jinher/personalNew/personalNewPage.plist"
         let iconDoc = "jhmac/Desktop/icon"
-        let toPath = "jhmac/hsg/hppersonalpagelib/HDPersonalPageBundle/personalImages"
+        let toPath = "jhmac/hsg/hppersonalpagelib/HDPersonalPageBundle"
         let dicInfo = NSDictionary(contentsOfFile: plistPath)
         let menus:Array = dicInfo?.object(forKey: "menu") as! Array<NSDictionary>
         for i in 0..<menus.count {
@@ -75,17 +75,19 @@ class FilesProviderTests: XCTestCase {
                 let filePath3 = "\(iconDoc)/\(iconname!)@3x.png"
                 let toPath3 = "\(toPath)/\(iconstr!)@3x.png"
                 
-                let ext2 = "/Users/\(filePath2)"
-                let ext3 = "/Users/\(filePath3)"
+                let ext2 = "/Users/\(toPath2)"
+                let ext3 = "/Users/\(toPath3)"
                 
                 if FileManager.default.fileExists(atPath: ext2) {
-                    print("准备替换：\(filePath2)")
+//                    print("准备替换：\(filePath2)")
                     provider.removeItem(path: toPath2) { (error) in
                         self.provider.moveItem(path: filePath2, to: toPath2, completionHandler: nil)
                     }
+                }else{
+                    print("\(iconname!)不存在：\(toPath2)")
                 }
                 if FileManager.default.fileExists(atPath: ext3) {
-                    print("准备替换：\(filePath3)")
+//                    print("准备替换：\(filePath3)")
                     provider.removeItem(path: toPath3) { (error) in
                         self.provider.moveItem(path: filePath3, to: toPath3, overwrite: true) { (error) in
                             if j == menus.count - 1
@@ -94,6 +96,8 @@ class FilesProviderTests: XCTestCase {
                             }
                         }
                     }
+                }else{
+//                    print("不存在：\(toPath3)")
                 }
             }
         }
