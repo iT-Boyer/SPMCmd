@@ -1,6 +1,7 @@
-#!/usr/bin/swift sh
+#!/usr/bin/swift
+// 切换：系统命令工具
+//#!/usr/bin/swift sh
 // 默认：swift-sh命令工具
-//#!/usr/bin/swift   // 切换：系统命令工具
 // (https://github.com/it-boyer)
 
 /*:
@@ -25,7 +26,7 @@ class script
     //MARK:- api
     func say(name:String)->String
     {
-        print("\(name)欢迎光临")
+        return "\(name)欢迎光临";
     }
     //MARK:- model event
 
