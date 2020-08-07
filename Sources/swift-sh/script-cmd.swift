@@ -1,7 +1,7 @@
-#!/usr/bin/swift
+#!/usr/bin/swift sh
 // 切换：系统命令工具
 //#!/usr/bin/swift sh
-// 默认：swift-sh命令工具
+// 默认：swift-sh命令工具 修改版本号：.macOS(.v10_15)
 // (https://github.com/it-boyer)
 
 /*:
