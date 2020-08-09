@@ -44,4 +44,7 @@ class script
 }
 
 let say = script().say(name:"李四")
-print(say)
+for x in 0..<10
+{
+ print(say)
+}
