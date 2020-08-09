@@ -26,6 +26,8 @@ class script
     //MARK:- api
     func say(name:String)->String
     {
+        //该怎么开启算法的旅程
+        //从类图，用例图，流程图开启算法之旅
         return "\(name)欢迎光临";
     }
     //MARK:- model event
@@ -44,7 +46,7 @@ class script
 }
 
 let say = script().say(name:"李四")
-for x in 0..<10
+for x in 0..<4
 {
- print(say)
+    print(say)
 }
