@@ -1,4 +1,4 @@
-//#!/usr/bin/swift sh
+#!/usr/bin/swift sh
 
 import Foundation
 import ArgumentParser // apple/swift-argument-parser (ArgumentParser)
@@ -11,7 +11,8 @@ import PathKit
  ^^暂时不支持swift文件导入方式，不能像ruby一样加载另一个rb文件
  */
 
-//使用：swift-sh ProjTool.swift [参数]
+//用法1：swift-sh ProjTool.swift [参数]
+//用法2:./ProjTool.swift --version
 struct ProjTool: ParsableCommand {
     // 自定义设置
     static var configuration =
@@ -97,4 +98,4 @@ extension ProjTool{
 }
 
 
-//ProjTool.main()
+ProjTool.main()
