@@ -1,5 +1,5 @@
 // (https://github.com/it-boyer)                    
-//https://www.carymic.com/2020/03/01/介绍swift-argumentparser库/#more-194
+//https://www.carymic.com/2020/03/01/介绍swift-argumentparser库/
 
 import ArgumentParser
 
