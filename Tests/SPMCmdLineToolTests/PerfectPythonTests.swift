@@ -22,7 +22,7 @@ class PerfectPythonTests: XCTestCase {
 
     func testExample() {
         //导入Python函数库模块/compresspng.py
-        let path = "/Users/admin/hsg/hexo/GitSubmodules/hsgTool/pngquant"
+        let path = "/Users/jhmac/hsg/hugo/dotfiles/bin/jar/pngquant"
         let pymod = try! PyObj(path: path, import: "compresspng")
         //获取变量值
         if let str = pymod.load("stringVar")?.value as? String {
